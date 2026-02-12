@@ -1,0 +1,252 @@
+/* ============================================
+   上海星展瀚电子 企业官网 - 自定义样式
+   ============================================ */
+
+/* ---------- 全局基础样式 ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ---------- 导航栏样式 ---------- */
+.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+  box-shadow: 0 2px 20px rgba(76, 29, 149, 0.1);
+}
+
+.navbar.scrolled .nav-link {
+  color: #4c1d95 !important;
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: #7c3aed !important;
+}
+
+.navbar.scrolled .nav-logo-text {
+  color: #4c1d95 !important;
+}
+
+/* 导航链接悬停下划线效果 */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #7c3aed;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ---------- Hero 区域背景 ---------- */
+.hero-bg {
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 紫色半透明遮罩层 —— 让背景图和品牌紫色融合 */
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(76, 29, 149, 0.55) 0%, rgba(124, 58, 237, 0.45) 50%, rgba(109, 40, 217, 0.5) 100%);
+  pointer-events: none;
+}
+
+/* Hero 区域浮动光点动画 */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  top: -150px;
+  right: -150px;
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-40px, 40px); }
+}
+
+/* ---------- 滚动动画 ---------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---------- 品牌卡片样式 ---------- */
+.brand-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.brand-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(76, 29, 149, 0.15);
+  border-color: #7c3aed;
+}
+
+/* 品牌卡片顶部色条 */
+.brand-card .card-accent {
+  height: 4px;
+  background: linear-gradient(90deg, #4c1d95, #7c3aed);
+  border-radius: 4px 4px 0 0;
+}
+
+/* ---------- 应用领域卡片 ---------- */
+.app-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(76, 29, 149, 0.1);
+}
+
+.app-card .icon-wrapper {
+  transition: background-color 0.3s ease;
+}
+
+.app-card:hover .icon-wrapper {
+  background-color: #7c3aed;
+}
+
+.app-card:hover .icon-wrapper svg {
+  color: white;
+}
+
+/* ---------- 优势卡片 ---------- */
+.advantage-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(76, 29, 149, 0.1);
+}
+
+/* ---------- 联系信息卡片 ---------- */
+.contact-card {
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ---------- 移动端菜单动画 ---------- */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-menu.open {
+  max-height: 300px;
+}
+
+/* ---------- 汉堡菜单按钮动画 ---------- */
+.hamburger-line {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* ---------- 区域分隔装饰线 ---------- */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4c1d95, #7c3aed);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* ---------- 按钮悬停效果 ---------- */
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+}
+
+/* ---------- 响应式微调 ---------- */
+@media (max-width: 768px) {
+  .hero-bg {
+    min-height: 70vh;
+  }
+}
+
+@media (min-width: 769px) {
+  .hero-bg {
+    min-height: 85vh;
+  }
+}
