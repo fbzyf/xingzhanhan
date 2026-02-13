@@ -48,6 +48,8 @@ xingzhanhan/
 | TOLL | 拓尔微 | 中国 | 马达驱动、DC/DC |
 | Nations Tech | 国民技术 | 中国 | 通用MCU、安全芯片、BLE蓝牙、电源管理 |
 | UTC | 友顺科技 | 台湾 | 功率器件 |
+| HOPERF | 华普微 | 中国 | RF射频芯片、LoRa模块、数字传感器、数字隔离芯片 |
+| Fortior Tech | 峰岹科技 | 中国 | 电机驱动芯片、MOSFET、MCU、IPM模块 |
 
 ## 技术方案
 
