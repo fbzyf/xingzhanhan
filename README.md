@@ -46,7 +46,7 @@ xingzhanhan/
 |------|--------|------|----------|
 | FULLHAN | 富瀚微 | 中国 | 视频处理SOC、ISO |
 | TOLL | 拓尔微 | 中国 | 马达驱动、DC/DC |
-| AutoChips | 杰发 | 中国 | MCU、SOC、汽车功放芯片、胎压监测芯片 |
+| Nations Tech | 国民技术 | 中国 | 通用MCU、安全芯片、BLE蓝牙、电源管理 |
 | UTC | 友顺科技 | 台湾 | 功率器件 |
 
 ## 技术方案
